@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import { LayoutsComponent } from './layouts.component';
-import { HomePageComponent } from '@coloroffortune/features/home-page/home-page.component';
-import { GAME_PAGE_ROUTES } from '@coloroffortune/features/game-page/games-page.routes';
+import { HomePageComponent } from '@bluebook/features/home-page/home-page.component';
 
 export const routes: Routes = [
     {
@@ -11,10 +10,6 @@ export const routes: Routes = [
             {
                 path: 'home',
                 component: HomePageComponent
-            },
-            {
-                path: 'games',
-                loadChildren: () => GAME_PAGE_ROUTES
             },
             {
                 path: '**',

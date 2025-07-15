@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ColorOfFortune:build:production"
+              "buildTarget": "BlueBook:build:production"
             },
             "development": {
-              "buildTarget": "ColorOfFortune:build:development"
+              "buildTarget": "BlueBook:build:development"
             }
           },
           "defaultConfiguration": "development"
