@@ -12,10 +12,6 @@ export class LayoutsComponent {
     {
       name: "Home",
       path: '/home'
-    },
-    {
-      name: "Games",
-      path: '/games'
-    },
+    }
   ];
 }
