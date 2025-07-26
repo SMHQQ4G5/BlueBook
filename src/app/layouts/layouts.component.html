@@ -1,10 +1,19 @@
-<nav>
-    <ul>
-        @for(menu of navMenus; track menu) {
-            <li>
-                <a [routerLink]="menu.path">{{menu.name}}</a>
-            </li> 
-        }
-    </ul>
-</nav>
-<router-outlet />
+<mat-toolbar>
+    <span>
+        Application Title
+    </span>
+    <mat-tab-group>
+        <mat-tab label="Home">
+
+        </mat-tab>
+    </mat-tab-group>
+    <span>Profile/Login</span>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened>
+        LEFT SIDEBAR
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet />
+    </mat-sidenav-content>
+</mat-sidenav-container>

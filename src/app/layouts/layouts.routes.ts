@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { LayoutsComponent } from './layouts.component';
 import { HomePageComponent } from '@bluebook/features/home-page/home-page.component';
+import { UserSettingsPageComponent } from '@bluebook/features/user-settings-page/user-settings-page.component';
 
 export const routes: Routes = [
     {
@@ -10,6 +11,10 @@ export const routes: Routes = [
             {
                 path: 'home',
                 component: HomePageComponent
+            },
+            {
+                path: 'user',
+                component: UserSettingsPageComponent
             },
             {
                 path: '**',

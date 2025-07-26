@@ -1,1 +1,18 @@
-<p>home-page works!</p>
+<section class="main-content">
+    <mat-sidenav-container>
+        <mat-sidenav mode="side" opened position="end">
+            <!-- TODO: Leader board -->
+            RIGHT SIDEBAR HERE
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <!-- TODO: Discussion boards-->
+            <mat-tab-group [selectedIndex]="selectedIndex" (selectedIndexChange)="onTabChange($event)">
+                @for (tab of tabs; track tab) {
+                    <mat-tab [label]="tab.label" />
+                }
+            </mat-tab-group>
+            <router-outlet />
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</section>
+
