@@ -14,17 +14,7 @@
                 }
             </nav>
             <mat-tab-nav-panel #tabPanel>
-                @switch(selectedTabIndex) {
-                    @case (0) {
-                        <app-tab1></app-tab1>
-                    }
-                    @case (1) {
-                        <app-tab2></app-tab2>
-                    }
-                    @case (2) {
-                        <app-tab3></app-tab3>
-                    }
-                }
+                <ng-container *ngComponentOutlet="selectedTab"></ng-container>
             </mat-tab-nav-panel>
         </mat-sidenav-content>
     </mat-sidenav-container>
