@@ -7,16 +7,24 @@
         <mat-sidenav-content>
             <!-- TODO: Discussion boards-->
             <nav mat-tab-nav-bar [tabPanel]="tabPanel">
-                @for(tab of tabs; track tab) {
-                    <a mat-tab-link
-                        [routerLink]="tab.path"
-                        routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
+                @for(tab of tabs; track tab; let idx = $index) {
+                    <a mat-tab-link (click)="onTabChanged(idx)" [active]="selectedTabIndex === idx">
                         {{ tab.label }}
                     </a>
                 }
             </nav>
             <mat-tab-nav-panel #tabPanel>
-                <router-outlet />
+                @switch(selectedTabIndex) {
+                    @case (0) {
+                        <app-tab1></app-tab1>
+                    }
+                    @case (1) {
+                        <app-tab2></app-tab2>
+                    }
+                    @case (2) {
+                        <app-tab3></app-tab3>
+                    }
+                }
             </mat-tab-nav-panel>
         </mat-sidenav-content>
     </mat-sidenav-container>

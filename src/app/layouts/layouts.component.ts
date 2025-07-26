@@ -26,8 +26,8 @@ export class LayoutsComponent {
   tabs = [
     { label: 'Home Page', path: '/home' },
     { label: 'Discussions', path: '/user' },
-    { label: 'Categories', path: '/user' },
-    { label: 'Support', path: '/user' }
+    { label: 'Categories', path: '/home' },
+    { label: 'Support', path: '/home' }
   ];
 
 
