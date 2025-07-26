@@ -1,18 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatTabsModule } from '@angular/material/tabs';
+import { MatTabLink, MatTabNav, MatTabsModule } from '@angular/material/tabs';
 import { MatSidenavModule } from '@angular/material/sidenav';
 
 
 const MODULE_DEPENDENCIES: any = [
   MatToolbarModule, 
-  MatTabsModule, 
   RouterModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatTabsModule,
 ];
-const COMPONENT_DEPENDENCIES: any = [
-];
+const COMPONENT_DEPENDENCIES: any = [];
 
 @Component({
   selector: 'app-layouts',
@@ -24,4 +23,15 @@ const COMPONENT_DEPENDENCIES: any = [
   styleUrl: './layouts.component.scss'
 })
 export class LayoutsComponent {
+  tabs = [
+    { label: 'Home Page', path: '/home' },
+    { label: 'Discussions', path: '/user' },
+    { label: 'Categories', path: '/user' },
+    { label: 'Support', path: '/user' }
+  ];
+
+
+  ngOnInit() {
+    // Set the initial selected index based on the current route
+  }
 }

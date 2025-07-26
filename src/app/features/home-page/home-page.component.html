@@ -2,16 +2,22 @@
     <mat-sidenav-container>
         <mat-sidenav mode="side" opened position="end">
             <!-- TODO: Leader board -->
-            RIGHT SIDEBAR HERE
+            RIGHT SIDEBAR
         </mat-sidenav>
         <mat-sidenav-content>
             <!-- TODO: Discussion boards-->
-            <mat-tab-group [selectedIndex]="selectedIndex" (selectedIndexChange)="onTabChange($event)">
-                @for (tab of tabs; track tab) {
-                    <mat-tab [label]="tab.label" />
+            <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+                @for(tab of tabs; track tab) {
+                    <a mat-tab-link
+                        [routerLink]="tab.path"
+                        routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
+                        {{ tab.label }}
+                    </a>
                 }
-            </mat-tab-group>
-            <router-outlet />
+            </nav>
+            <mat-tab-nav-panel #tabPanel>
+                <router-outlet />
+            </mat-tab-nav-panel>
         </mat-sidenav-content>
     </mat-sidenav-container>
 </section>

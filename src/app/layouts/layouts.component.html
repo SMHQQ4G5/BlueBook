@@ -2,11 +2,15 @@
     <span>
         Application Title
     </span>
-    <mat-tab-group>
-        <mat-tab label="Home">
-
-        </mat-tab>
-    </mat-tab-group>
+    <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+        @for(tab of tabs; track tab) {
+            <a mat-tab-link
+                [routerLink]="tab.path"
+                routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
+                {{ tab.label }}
+            </a>
+        }
+    </nav>
     <span>Profile/Login</span>
 </mat-toolbar>
 <mat-sidenav-container>
@@ -14,6 +18,8 @@
         LEFT SIDEBAR
     </mat-sidenav>
     <mat-sidenav-content>
-        <router-outlet />
+        <mat-tab-nav-panel #tabPanel>
+            <router-outlet />
+        </mat-tab-nav-panel>
     </mat-sidenav-content>
 </mat-sidenav-container>

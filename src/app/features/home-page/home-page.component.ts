@@ -22,7 +22,7 @@ export class HomePageComponent {
 
   selectedIndex = 0;
   tabs = [
-    {label: 'Recent Discussions', path: '/home/tab1'},
+    {label: 'Recent Discussions', path: '/home'},
     {label: 'Trending Discussions', path: '/user'},
     {label: 'Announced Discussions', path: '/home/tab3'},
   ];
