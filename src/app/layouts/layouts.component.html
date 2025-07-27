@@ -15,8 +15,38 @@
     <nav>Profile/Login</nav>
 </mat-toolbar>
 <mat-sidenav-container>
-    <mat-sidenav mode="side" opened>
-        LEFT SIDEBAR
+    <mat-sidenav mode="side" opened fixedInViewport="true" fixedTopGap="64" fixedBottomGap="0">
+        <mat-card class="no-box-shadow">
+            <mat-card-header>
+                <span class="font-bold">Quick Links</span>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-list>
+                    <mat-list-item>
+                        <a matListItemTitle>This is a sample Link 1</a>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <a matListItemTitle>This is a sample Link 2</a>
+                    </mat-list-item>
+                </mat-list>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="no-box-shadow">
+            <mat-card-header>
+                <span class="font-bold">Tags</span>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-list>
+                    <mat-list-item>
+                        <a matListItemTitle>This is a sample Link 1</a>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <a matListItemTitle>This is a sample Link 2</a>
+                    </mat-list-item>
+                </mat-list>
+            </mat-card-content>
+        </mat-card>
     </mat-sidenav>
     <mat-sidenav-content>
         <mat-tab-nav-panel #tabPanel>

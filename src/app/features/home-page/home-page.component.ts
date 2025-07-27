@@ -6,8 +6,10 @@ import { CommonModule } from '@angular/common';
 import { Tab1Component } from './components/tab1/tab1.component';
 import { Tab2Component } from './components/tab2/tab2.component';
 import { Tab3Component } from './components/tab3/tab3.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
 
-const MODULE_DEPENDENCIES: any = [MatTabsModule, RouterModule, MatSidenavModule, CommonModule];
+const MODULE_DEPENDENCIES: any = [MatTabsModule, RouterModule, MatSidenavModule, CommonModule, MatCardModule, MatListModule];
 const COMPONENT_DEPENDENCIES: any = [];
 
 @Component({

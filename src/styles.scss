@@ -3,7 +3,7 @@
 @use '@angular/material' as mat;
 
 // Import Tailwind CSS
-@use 'tailwindcss';
+@use 'tailwindcss' as *;
 
 html {
   @include mat.theme((
@@ -19,10 +19,35 @@ html {
 
   @include mat.theme-overrides((
     corner-large: 0,
+    
   ));
+
+  @include mat.card-overrides((
+    elevated-container-shape: none,
+    elevated-container-color: none,
+    title-text-size: .9rem,
+    title-text-weight: bold,
+    subtitle-text-size: .875rem
+  ));
+
+  @include mat.list-overrides((
+    list-item-label-text-size: .875rem
+  ));  
 
 }/* You can add global styles to this file, and also import other style files */
 
+html {
+  font-size: 16px;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { 
+  height: 100%; 
+  @apply overflow-hidden;
+}
+body { 
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.no-box-shadow {
+  box-shadow: none !important;
+}

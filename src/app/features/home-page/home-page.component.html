@@ -1,22 +1,52 @@
-<section class="main-content">
-    <mat-sidenav-container>
-        <mat-sidenav mode="side" opened position="end">
-            <!-- TODO: Leader board -->
-            RIGHT SIDEBAR
-        </mat-sidenav>
-        <mat-sidenav-content>
-            <!-- TODO: Discussion boards-->
-            <nav mat-tab-nav-bar [tabPanel]="tabPanel">
-                @for(tab of tabs; track tab; let idx = $index) {
-                    <a mat-tab-link (click)="onTabChanged(idx)" [active]="selectedTabIndex === idx">
-                        {{ tab.label }}
-                    </a>
-                }
-            </nav>
-            <mat-tab-nav-panel #tabPanel>
-                <ng-container *ngComponentOutlet="selectedTab"></ng-container>
-            </mat-tab-nav-panel>
-        </mat-sidenav-content>
-    </mat-sidenav-container>
-</section>
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened position="end" fixedInViewport="true" fixedTopGap="64" fixedBottomGap="0">
+        <!-- TODO: Leader board -->
+        <mat-card class="no-box-shadow">
+            <mat-card-header>
+                <span class="font-bold">Leaders Board</span>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-card-subtitle>Congratulations to the most active monthly users!</mat-card-subtitle>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="no-box-shadow">
+            <mat-card-header>
+                <div mat-card-avatar class="border-1"></div>
+                <mat-card-title>Shiba Inu</mat-card-title>
+                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+            </mat-card-header>
+        </mat-card>
+        <mat-card class="no-box-shadow">
+            <mat-card-header>
+                <div mat-card-avatar class="border-1"></div>
+                <mat-card-title>Terrier</mat-card-title>
+                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+            </mat-card-header>
+        </mat-card>
+        <mat-card class="no-box-shadow">
+            <mat-card-header>
+                <div mat-card-avatar class="border-1"></div>
+                <mat-card-title>Persian</mat-card-title>
+                <mat-card-subtitle>Cat Breed</mat-card-subtitle>
+            </mat-card-header>
+        </mat-card>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <!-- TODO: Discussion boards-->
+        <mat-card class="no-box-shadow">
+            <mat-card-content>
+                <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+                    @for(tab of tabs; track tab; let idx = $index) {
+                        <a mat-tab-link (click)="onTabChanged(idx)" [active]="selectedTabIndex === idx">
+                            {{ tab.label }}
+                        </a>
+                    }
+                </nav>
+                <mat-tab-nav-panel #tabPanel>
+                    <ng-container *ngComponentOutlet="selectedTab"></ng-container>
+                </mat-tab-nav-panel>
+            </mat-card-content>
+        </mat-card>
 
+    </mat-sidenav-content>
+</mat-sidenav-container>

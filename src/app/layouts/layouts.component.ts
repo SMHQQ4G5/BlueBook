@@ -1,17 +1,21 @@
 import { Component } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatTabLink, MatTabNav, MatTabsModule } from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 import { MatSidenavModule } from '@angular/material/sidenav';
-
+import { MatCardModule } from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
 
 const MODULE_DEPENDENCIES: any = [
   MatToolbarModule, 
   RouterModule,
   MatSidenavModule,
   MatTabsModule,
+  MatCardModule,
+  MatListModule
 ];
-const COMPONENT_DEPENDENCIES: any = [];
+const COMPONENT_DEPENDENCIES: any = [
+];
 
 @Component({
   selector: 'app-layouts',
